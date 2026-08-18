@@ -22,6 +22,7 @@ _THIS_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = _THIS_DIR.parent
 _BLAXEL_DIR = _THIS_DIR.parent / "blaxel"
 
+load_dotenv(_REPO_ROOT / ".env")
 load_dotenv(_THIS_DIR / ".env")
 load_dotenv(_BLAXEL_DIR / ".env")
 sys.path.insert(0, str(_BLAXEL_DIR))
