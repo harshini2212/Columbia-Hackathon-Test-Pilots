@@ -19,11 +19,13 @@ from pydantic import BaseModel
 
 # Paths
 _THIS_DIR = Path(__file__).resolve().parent
+_REPO_ROOT = _THIS_DIR.parent
 _BLAXEL_DIR = _THIS_DIR.parent / "blaxel"
 
 load_dotenv(_THIS_DIR / ".env")
 load_dotenv(_BLAXEL_DIR / ".env")
 sys.path.insert(0, str(_BLAXEL_DIR))
+sys.path.insert(0, str(_REPO_ROOT))
 
 from scanner import Scanner
 from agent_tester import discover_tools, generate_test_plan, execute_test_plan
@@ -750,4 +752,5 @@ async def stream_pipeline(run_id: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

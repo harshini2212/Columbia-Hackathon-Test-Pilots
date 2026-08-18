@@ -95,7 +95,9 @@ export function usePipeline() {
     });
 
     try {
-      const startRes = await fetch("/api/pipeline/start", {
+      const apiBase = import.meta.env.VITE_API_URL ?? "";
+
+      const startRes = await fetch(`${apiBase}/api/pipeline/start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ urls }),
@@ -110,7 +112,7 @@ export function usePipeline() {
       const controller = new AbortController();
       abortRef.current = controller;
 
-      const streamRes = await fetch(`/api/pipeline/stream/${run_id}`, {
+      const streamRes = await fetch(`${apiBase}/api/pipeline/stream/${run_id}`, {
         signal: controller.signal,
       });
 
