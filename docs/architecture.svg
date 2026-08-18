@@ -1,9 +1,5 @@
 <svg viewBox="0 0 1250 1030" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe Print','Comic Sans MS','Trebuchet MS',sans-serif">
   <defs>
-    <filter id="wobble" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2"/>
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
     </marker>
@@ -15,14 +11,14 @@
   <text x="625" y="72" text-anchor="middle" font-size="15" fill="#495057">GitHub repo URLs in → live, tested MCP servers out</text>
 
   <!-- Browser -->
-  <rect x="495" y="100" width="260" height="70" rx="18" fill="#f1f3f5" stroke="#495057" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="495" y="100" width="260" height="70" rx="18" fill="#f1f3f5" stroke="#495057" stroke-width="2.5"/>
   <text x="625" y="131" text-anchor="middle" font-size="18" font-weight="700" fill="#1e1e1e">🧑‍💻 You</text>
   <text x="625" y="153" text-anchor="middle" font-size="12.5" fill="#495057">opens the web UI</text>
 
   <line x1="625" y1="170" x2="625" y2="212" stroke="#343a40" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Frontend -->
-  <rect x="375" y="215" width="500" height="85" rx="18" fill="#a5d8ff" stroke="#1971c2" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="375" y="215" width="500" height="85" rx="18" fill="#a5d8ff" stroke="#1971c2" stroke-width="2.5"/>
   <text x="625" y="246" text-anchor="middle" font-size="20" font-weight="700" fill="#0b3d63">🖥️ Frontend</text>
   <text x="625" y="268" text-anchor="middle" font-size="13" fill="#0b3d63">React + Vite · :8080 in dev, or its Railway URL</text>
   <text x="625" y="288" text-anchor="middle" font-size="12" fill="#1971c2">calls the backend at VITE_API_URL</text>
@@ -34,7 +30,7 @@
   <text x="787" y="325" font-size="11.5" fill="#343a40">SSE: live step events</text>
 
   <!-- Backend -->
-  <rect x="375" y="345" width="500" height="85" rx="18" fill="#b2f2bb" stroke="#2f9e44" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="375" y="345" width="500" height="85" rx="18" fill="#b2f2bb" stroke="#2f9e44" stroke-width="2.5"/>
   <text x="625" y="376" text-anchor="middle" font-size="20" font-weight="700" fill="#1e5f2e">⚙️ Backend</text>
   <text x="625" y="398" text-anchor="middle" font-size="13" fill="#1e5f2e">FastAPI + SSE · :8000 in dev, or its Railway URL</text>
   <text x="625" y="418" text-anchor="middle" font-size="12" fill="#2f9e44">backend.py — orchestrates the pipeline below</text>
@@ -42,7 +38,7 @@
   <line x1="625" y1="430" x2="625" y2="458" stroke="#343a40" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Pipeline bar -->
-  <rect x="225" y="460" width="800" height="42" rx="14" fill="#fff3bf" stroke="#f08c00" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="225" y="460" width="800" height="42" rx="14" fill="#fff3bf" stroke="#f08c00" stroke-width="2.5"/>
   <text x="625" y="487" text-anchor="middle" font-size="15.5" font-weight="700" fill="#8a4b00">🧪 Pipeline Engine — pipeline/*.py · 11 stages, streamed live over SSE</text>
 
   <!-- Frame around stage chips -->
@@ -50,27 +46,27 @@
 
   <!-- Row A chips -->
   <g font-size="13" font-weight="700" fill="#7a4b00">
-    <rect x="245" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="245" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="300" y="574" text-anchor="middle">1 · Clone</text>
     <text x="300" y="594" text-anchor="middle" font-size="10.5" font-weight="400">via Blaxel</text>
 
-    <rect x="375" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="375" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="430" y="574" text-anchor="middle">2 · Sandbox</text>
     <text x="430" y="594" text-anchor="middle" font-size="10.5" font-weight="400">provision compute</text>
 
-    <rect x="505" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="505" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="560" y="574" text-anchor="middle">3 · Extract</text>
     <text x="560" y="594" text-anchor="middle" font-size="10.5" font-weight="400">find OpenAPI</text>
 
-    <rect x="635" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="635" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="690" y="574" text-anchor="middle">4 · Ingest</text>
     <text x="690" y="594" text-anchor="middle" font-size="10.5" font-weight="400">parse specs</text>
 
-    <rect x="765" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="765" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="820" y="574" text-anchor="middle">5 · Discover</text>
     <text x="820" y="594" text-anchor="middle" font-size="10.5" font-weight="400">mine tools</text>
 
-    <rect x="895" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="895" y="545" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="950" y="574" text-anchor="middle">6 · Schema</text>
     <text x="950" y="594" text-anchor="middle" font-size="10.5" font-weight="400">type each tool</text>
   </g>
@@ -85,23 +81,23 @@
 
   <!-- Row B chips -->
   <g font-size="13" font-weight="700" fill="#7a4b00">
-    <rect x="310" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="310" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="365" y="684" text-anchor="middle">7 · Policy</text>
     <text x="365" y="704" text-anchor="middle" font-size="10.5" font-weight="400">safety rules</text>
 
-    <rect x="440" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="440" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="495" y="684" text-anchor="middle">8 · Generate</text>
     <text x="495" y="704" text-anchor="middle" font-size="10.5" font-weight="400">LLM → server.py</text>
 
-    <rect x="570" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="570" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="625" y="684" text-anchor="middle">9 · MCP Test</text>
     <text x="625" y="704" text-anchor="middle" font-size="10.5" font-weight="400">validate code</text>
 
-    <rect x="700" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="700" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="755" y="684" text-anchor="middle">10 · Deploy</text>
     <text x="755" y="704" text-anchor="middle" font-size="10.5" font-weight="400">ship to Blaxel</text>
 
-    <rect x="830" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2" filter="url(#wobble)"/>
+    <rect x="830" y="655" width="110" height="68" rx="14" fill="#ffec99" stroke="#f08c00" stroke-width="2.2"/>
     <text x="885" y="684" text-anchor="middle">11 · User Test</text>
     <text x="885" y="704" text-anchor="middle" font-size="10.5" font-weight="400">AI agent runs it</text>
   </g>
@@ -115,19 +111,19 @@
   <line x1="605" y1="743" x2="605" y2="798" stroke="#343a40" stroke-width="2.2" marker-end="url(#arrow)"/>
   <line x1="885" y1="743" x2="885" y2="798" stroke="#343a40" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
 
-  <rect x="195" y="800" width="260" height="85" rx="18" fill="#ffd8a8" stroke="#e8590c" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="195" y="800" width="260" height="85" rx="18" fill="#ffd8a8" stroke="#e8590c" stroke-width="2.5"/>
   <text x="325" y="831" text-anchor="middle" font-size="17" font-weight="700" fill="#7a2e00">☁️ Blaxel</text>
   <text x="325" y="852" text-anchor="middle" font-size="11.5" fill="#7a2e00">sandboxes + hosts the MCP</text>
   <text x="325" y="866" text-anchor="middle" font-size="11.5" fill="#7a2e00">&amp; upstream API services</text>
   <text x="325" y="881" text-anchor="middle" font-size="10.5" fill="#e8590c">used by: Clone, Sandbox, Deploy</text>
 
-  <rect x="475" y="800" width="260" height="85" rx="18" fill="#d0bfff" stroke="#7048e8" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="475" y="800" width="260" height="85" rx="18" fill="#d0bfff" stroke="#7048e8" stroke-width="2.5"/>
   <text x="605" y="831" text-anchor="middle" font-size="17" font-weight="700" fill="#3e1f8c">🧠 Featherless</text>
   <text x="605" y="852" text-anchor="middle" font-size="11.5" fill="#3e1f8c">DeepSeek-V3 LLM writes</text>
   <text x="605" y="866" text-anchor="middle" font-size="11.5" fill="#3e1f8c">the generated server.py</text>
   <text x="605" y="881" text-anchor="middle" font-size="10.5" fill="#7048e8">used by: Generate</text>
 
-  <rect x="755" y="800" width="260" height="85" rx="18" fill="#eebefa" stroke="#9c36b5" stroke-width="2.5" stroke-dasharray="7 5" filter="url(#wobble)"/>
+  <rect x="755" y="800" width="260" height="85" rx="18" fill="#eebefa" stroke="#9c36b5" stroke-width="2.5" stroke-dasharray="7 5"/>
   <text x="885" y="831" text-anchor="middle" font-size="17" font-weight="700" fill="#5c1a6e">✨ Gemini</text>
   <text x="885" y="852" text-anchor="middle" font-size="11.5" fill="#5c1a6e">optional fallback for</text>
   <text x="885" y="866" text-anchor="middle" font-size="11.5" fill="#5c1a6e">messy / malformed specs</text>
@@ -135,7 +131,7 @@
 
   <!-- Output -->
   <path d="M885,723 C885,860 625,860 625,918" fill="none" stroke="#343a40" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="425" y="920" width="400" height="75" rx="18" fill="#ffc9c9" stroke="#e03131" stroke-width="2.5" filter="url(#wobble)"/>
+  <rect x="425" y="920" width="400" height="75" rx="18" fill="#ffc9c9" stroke="#e03131" stroke-width="2.5"/>
   <text x="625" y="950" text-anchor="middle" font-size="18" font-weight="700" fill="#8a0000">✅ Live MCP endpoints</text>
   <text x="625" y="972" text-anchor="middle" font-size="13" fill="#8a0000">+ AI-agent end-to-end test report</text>
 </svg>
