@@ -126,15 +126,19 @@ python generate.py path/to/spec.json --no-deploy -v
 
 ## Deploying (Railway)
 
-This is a monorepo with two independently deployable services — Railway needs to know that explicitly, it won't infer it from the repo root.
+### Option A — just the UI (zero config)
 
-1. Create **two** Railway services from the same GitHub repo (New → Deploy from GitHub repo, twice).
-2. On the backend service → **Settings → Root Directory** → `blaxel-swagger-finder`. Add the env vars from the table above.
-3. On the frontend service → **Settings → Root Directory** → `Columbia-Hackathon-Test-Pilot-Frontend`. Add `VITE_API_URL` set to the backend service's public Railway URL (from step 2, available once it's deployed).
-4. Both folders already ship a `railpack.json` pinning the exact start command (`python backend.py` / `npm run start`), so Railway's build/start detection doesn't have to guess between `backend.py`, `app.py`, and `main.py`, or figure out how to serve a Vite app in production.
-5. Redeploy the frontend after the backend has a live URL, so `VITE_API_URL` is baked into the build.
+The repo root has its own `package.json` + `railpack.json` that build and serve the React frontend directly — no Root Directory setting, no env vars, no second service. Connect the repo on Railway and deploy: that's it. This gets you a live link to the UI; the "Start Pipeline" button will error since there's no backend behind it, which is fine for a demo and not fine for a real run.
 
-Without step 1–2, Railway's builder scans the repo root, finds no `requirements.txt`/`package.json` there (they're both one level down), and fails with *"could not determine how to build the app."*
+### Option B — the full working pipeline
+
+For "Start Pipeline" to actually run, the backend needs to be live too, as its own service:
+
+1. Create a **second** Railway service from the same GitHub repo (New → Deploy from GitHub repo again).
+2. On it → **Settings → Root Directory** → `blaxel-swagger-finder`. Add the env vars from the table above.
+3. On the frontend service (from Option A) → add `VITE_API_URL` set to the backend service's public Railway URL (available once step 1 is deployed) → redeploy so it's baked into the build.
+
+Both service subfolders also ship their own `railpack.json` pinning the exact start command (`python backend.py` / `npm run start`), so Root Directory-based deploys don't have to guess between `backend.py`, `app.py`, and `main.py` in the backend folder.
 
 ## Generated Output
 
