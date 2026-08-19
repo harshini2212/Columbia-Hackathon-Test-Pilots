@@ -1,0 +1,10 @@
+{
+  "name": "test-pilot",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Root deploy wrapper — builds and serves the React frontend so the repo deploys with zero configuration (no Root Directory setting needed).",
+  "scripts": {
+    "build": "cd Columbia-Hackathon-Test-Pilot-Frontend && npm install && npm run build",
+    "start": "cd Columbia-Hackathon-Test-Pilot-Frontend && npm run start"
+  }
+}
